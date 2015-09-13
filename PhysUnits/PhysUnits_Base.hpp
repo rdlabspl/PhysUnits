@@ -86,6 +86,10 @@ public:
 
     bool operator==(const typename T::Unit::Base_Unit& u) const { return to_base_unit() == u.to_base_unit(); }
     bool operator!=(const typename T::Unit::Base_Unit& u) const { return !operator==(u); }
+    bool operator<(const typename T::Unit::Base_Unit& u) const { return to_base_unit() < u.to_base_unit(); }
+    bool operator<=(const typename T::Unit::Base_Unit& u) const { return to_base_unit() <= u.to_base_unit(); }
+    bool operator>(const typename T::Unit::Base_Unit& u) const { return to_base_unit() > u.to_base_unit(); }
+    bool operator>=(const typename T::Unit::Base_Unit& u) const { return to_base_unit() >= u.to_base_unit(); }
 
 };
 
@@ -126,6 +130,10 @@ public:
 
     bool operator==(const T& t) const { return x == t.x; }
     bool operator!=(const T& t) const { return !operator==(t); }
+    bool operator<(const T& t) const { return x < t.x; }
+    bool operator<=(const T& t) const { return x <= t.x; }
+    bool operator>(const T& t) const { return x > t.x; }
+    bool operator>=(const T& t) const { return x >= t.x; }
 
 };
 
