@@ -71,8 +71,7 @@ public:
     __Unit(const double _x = 0) : x(_x) {}
     __Unit(const typename T::Unit::Base_Unit& u) : x(from_base_unit(u.numeric_value())) {}
 
-    operator typename T::Unit::Base_Unit() const { return to_base_unit(); }
-    operator T() const { return operator typename T::Unit::Base_Unit(); }
+    operator T() const { return typename T::Unit::Base_Unit(to_base_unit()); }
 
     __Unit operator-() const { return -x; }
 

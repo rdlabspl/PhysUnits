@@ -19,7 +19,7 @@ using PHYSUNITS_NAMESPACE;
 
 int main()
 {
-    Length l1 = Length::Unit::cm(2.54);
+    Length l1(Length::Unit::cm(2.54));
     Length l2 = Length::Unit::mils(100);
 
     cout << "l1 = " << l1.mm() << "mm ; l2 = " << l2.mm() << "mm\n";
